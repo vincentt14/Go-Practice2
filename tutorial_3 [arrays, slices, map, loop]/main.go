@@ -33,9 +33,18 @@ func main() {
 	var myMap2 = map[string]uint8{"adam":23, "sarah":45}
 	fmt.Println(myMap2["adam"])
 	var age, ok = myMap2["adam"]
+	delete(myMap2, "adam")
 	if ok != false{
 		fmt.Printf("umur adam %v", age)
 	}else {
 		fmt.Println("ga ada adam")
+	}
+
+	for name, age := range myMap2{
+		fmt.Printf("Name: %v, age: %v \n", name, age)
+	}
+
+	for i, v := range intArr{
+		fmt.Printf("Index: %v, value: %v \n", i, v)
 	}
 }
